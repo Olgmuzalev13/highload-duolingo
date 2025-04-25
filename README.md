@@ -588,6 +588,27 @@ MongoDB-клиенты используют пулы соединений для
 
 ## 11. Список серверов
 
+| Сервис                 | Технология                              | Целевая пиковая нагрузка (RPS) | RAM requests/limits | CPU requests/limits | Net (Gbit/s) |
+|------------------------|-----------------------------------------|--------------------------------|----------------------|---------------------|--------------|
+| Duolingo Super (Payment) | С++ (легкое JSON API)                   | 4                              | 10Mb/50Mb            | 1/1                 | 0.01         |
+| Authorization          | С++ (легкое JSON API)                   | 301                            | 60Mb/180Mb           | 1/2                 | 0.1          |
+| Authentication         | С++ (легкое JSON API)                   | 79                             | 20Mb/60Mb            | 1/1                 | 0.05         |
+| User Profile           | С++ (легкое JSON API)                   | 931                            | 200Mb/600Mb          | 1/2                 | 0.2          |
+| League System          | С++ (средняя бизнес-логика)             | 2400                           | 240Mb/720Mb          | 24/48               | 0.5          |
+| Daily Quests           | С++ (легкая бизнес логика)              | 410                            | 40Mb/120Mb           | 1/2                 | 0.1          |
+| Achievements           | С++ (легкая бизнес логика)              | 200                            | 20Mb/60Mb            | 1/1                 | 0.05         |
+| Mistakes               | С++ (тяжелая бизнес-логика)             | 18132                          | 1.8Gb/5.5Gb          | 1800/3600           | 2            |
+| Answer Images          | С++ (тяжелая бизнес-логика)             | 1435                           | 140Mb/420Mb          | 140/280             | 0.5          |
+| Answer Audio           | С++ (тяжелая бизнес-логика)             | 1071                           | 110Mb/330Mb          | 107/214             | 0.4          |
+| Lesson Collector       | С++ (средняя бизнес-логика)             | 21420                          | 240Mb/720Mb          | 214/428             | 1.5          |
+| Audio Lessons          | С++ (легкое JSON API)                   | 6817                           | 140Mb/420Mb          | 2/3                 | 1            |
+| Text+Audio Lessons     | С++ (легкое JSON API)                   | 13318                          | 270Mb/810Mb          | 3/4                 | 1.5          |
+| Images                 | С++ (легкое JSON API)                   | 15201                          | 300Mb/900Mb          | 4/5                 | 2            |
+| Events Notifications   | С++ (тяжелая бизнес-логика)             | 437                            | 430Mb/1.3Gb          | 43/87               | 0.2          |
+| Metrics                | С++ (легкое JSON API)                   | 40000                          | 80Mb/240Mb           | 8/12                | 0.5          |
+| Logs                   | С++ (легкое JSON API)                   | 40000                          | 80Mb/240Mb           | 8/12                | 0.5          |
+| SSL Termination        | Nginx (SSL handshake)                   | 30000                          | 600Mb/1800Mb         | 60/120              | 2.5          |
+
 ## Список источников
 
 1. SimilarWeb - https://www.similarweb.com/ru/website/duolingo.com/#overview
