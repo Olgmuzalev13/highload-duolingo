@@ -596,7 +596,7 @@ MongoDB-клиенты используют пулы соединений для
 
 ## 10. Схема проекта
 
-![alt text](working_scheme2.png)
+![alt text](working_scheme3.png)
 
 ## 11. Список серверов
 
